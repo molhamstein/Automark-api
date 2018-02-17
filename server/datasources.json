@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql-automark-db": {
+    "host": "localhost",
+    "database": "mvc_automark",
+    "password": "",
+    "name": "mysql-automark-db",
+    "connector": "mysql",
+    "user": "root"
+  }
+}

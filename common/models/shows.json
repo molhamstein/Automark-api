@@ -1,0 +1,45 @@
+{
+  "name": "shows",
+  "plural": "shows",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_s": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "name_s": {
+      "type": "string",
+      "required": true
+    },
+    "images_s": {
+      "type": "string",
+      "required": true
+    },
+    "act_s": {
+      "type": "number",
+      "required": true
+    },
+    "ads_s": {
+      "type": "string",
+      "required": true
+    },
+    "type_s": {
+      "type": "number",
+      "required": true
+    },
+    "email_s": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

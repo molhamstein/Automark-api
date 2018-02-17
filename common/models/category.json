@@ -1,0 +1,42 @@
+{
+  "name": "category",
+  "plural": "categories",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_ss": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "code_ss": {
+      "type": "string",
+      "required": true
+    },
+    "value_ss": {
+      "type": "string",
+      "required": true
+    },
+    "type_ss": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "id_cl": {
+      "type": "hasMany",
+      "model": "category_list",
+      "foreignKey": "category_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

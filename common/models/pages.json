@@ -1,0 +1,33 @@
+{
+  "name": "pages",
+  "plural": "pages",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_p": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "subject_p": {
+      "type": "string",
+      "required": true
+    },
+    "dir_p": {
+      "type": "string",
+      "required": true
+    },
+    "order_p": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,57 @@
+{
+  "name": "comment",
+  "plural": "comments",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_com": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "title_com": {
+      "type": "string",
+      "required": true
+    },
+    "subject_com": {
+      "type": "string",
+      "required": true
+    },
+    "ip_com": {
+      "type": "string",
+      "required": true
+    },
+    "id_user": {
+      "type": "number",
+      "required": true
+    },
+    "id_car": {
+      "type": "number",
+      "required": true
+    },
+    "time_com": {
+      "type": "string",
+      "required": true
+    },
+    "act_com": {
+      "type": "number",
+      "required": true
+    },
+    "name_com": {
+      "type": "string",
+      "required": true
+    },
+    "email_com": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "category_list",
+  "plural": "category_lists",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_cl": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "category_id": {
+      "type": "number",
+      "required": true
+    },
+    "option_id": {
+      "type": "number",
+      "required": true
+    },
+    "order_cl": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

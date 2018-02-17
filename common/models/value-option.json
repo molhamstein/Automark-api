@@ -1,0 +1,33 @@
+{
+  "name": "value_option",
+  "plural": "value_option",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_v": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "option_id_v": {
+      "type": "number",
+      "required": true
+    },
+    "value_v": {
+      "type": "string",
+      "required": true
+    },
+    "type_v": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

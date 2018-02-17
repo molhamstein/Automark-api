@@ -1,0 +1,29 @@
+{
+  "name": "permis",
+  "plural": "permis",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_m": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "name_m": {
+      "type": "number",
+      "required": true
+    },
+    "code_m": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

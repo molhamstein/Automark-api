@@ -1,0 +1,43 @@
+{
+  "name": "mazad",
+  "plural": "mazads",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "mazad_id": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "cars_id": {
+      "type": "number",
+      "required": true
+    },
+    "price_mazad": {
+      "type": "number",
+      "required": true
+    },
+    "comment_mazad": {
+      "type": "string"
+    },
+    "status_mazad": {
+      "type": "number"
+    },
+    "time_mazad": {
+      "type": "timestamp",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

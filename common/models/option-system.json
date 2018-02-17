@@ -1,0 +1,32 @@
+{
+  "name": "option_system",
+  "plural": "option_system",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_sys": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "name_sys": {
+      "type": "string"
+    },
+    "value_sys": {
+      "type": "string",
+      "required": true
+    },
+    "type_sys": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

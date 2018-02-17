@@ -1,0 +1,24 @@
+{
+  "name": "cars_meta",
+  "plural": "cars_metas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_cars_m": {
+      "type": "number"
+    },
+    "code_m": {
+      "type": "string"
+    },
+    "value_m": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

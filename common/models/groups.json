@@ -1,0 +1,29 @@
+{
+  "name": "groups",
+  "plural": "groups",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_g": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "name_g": {
+      "type": "string",
+      "required": true
+    },
+    "permissions": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

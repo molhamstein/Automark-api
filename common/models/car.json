@@ -1,0 +1,90 @@
+{
+  "name": "car",
+  "plural": "cars",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title_c": {
+      "type": "string"
+    },
+    "type_c": {
+      "type": "number"
+    },
+    "model_c": {
+      "type": "number"
+    },
+    "category_c": {
+      "type": "number"
+    },
+    "year_c": {
+      "type": "number"
+    },
+    "color_c": {
+      "type": "string"
+    },
+    "odometer_c": {
+      "type": "string"
+    },
+    "transsmission_c": {
+      "type": "string"
+    },
+    "status_c": {
+      "type": "string"
+    },
+    "body_c": {
+      "type": "string"
+    },
+    "form_c": {
+      "type": "string"
+    },
+    "price_c": {
+      "type": "string"
+    },
+    "Country_c": {
+      "type": "number"
+    },
+    "city_c": {
+      "type": "number"
+    },
+    "features_c": {
+      "type": "number"
+    },
+    "images_c": {
+      "type": "string"
+    },
+    "type_ads_c": {
+      "type": "string"
+    },
+    "shows_c": {
+      "type": "number"
+    },
+    "description_c": {
+      "type": "string"
+    },
+    "special_c": {
+      "type": "string"
+    },
+    "dateadd_c": {
+      "type": "date"
+    },
+    "end_c": {
+      "type": "number"
+    },
+    "id_user": {
+      "type": "number"
+    },
+    "act_c": {
+      "type": "number"
+    },
+    "vzt_c": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

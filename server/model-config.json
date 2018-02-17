@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Message": {
+    "dataSource": null
+  },
+  "category": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "category_list": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "chat": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "code_active": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "comment": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "groups": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "mazad": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "option_system": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "order_cars": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "pages": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "permis": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "shows": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "spam_system": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "value_option": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  }
+}

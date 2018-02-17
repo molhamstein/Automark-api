@@ -1,0 +1,37 @@
+{
+  "name": "code_active",
+  "plural": "code_active",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_a": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "user_a": {
+      "type": "string",
+      "required": true
+    },
+    "code_a": {
+      "type": "string",
+      "required": true
+    },
+    "type_a": {
+      "type": "string",
+      "required": true
+    },
+    "timeend_a": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,61 @@
+{
+  "name": "chat",
+  "plural": "chats",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_chat": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "sender_id": {
+      "type": "number",
+      "required": true
+    },
+    "send_id": {
+      "type": "number",
+      "required": true
+    },
+    "message_chat": {
+      "type": "string",
+      "required": true
+    },
+    "time_chat": {
+      "type": "timestamp",
+      "required": true
+    },
+    "title_chat": {
+      "type": "string",
+      "required": true
+    },
+    "type_chat": {
+      "type": "string",
+      "required": true
+    },
+    "status_chat": {
+      "type": "number",
+      "required": true
+    },
+    "sub_id": {
+      "type": "number",
+      "required": true
+    },
+    "mazad_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

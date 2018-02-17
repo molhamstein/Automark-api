@@ -1,0 +1,53 @@
+{
+  "name": "spam_system",
+  "plural": "spam_system",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_ss": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "type_ss": {
+      "type": "number",
+      "required": true
+    },
+    "subject_ss": {
+      "type": "string",
+      "required": true
+    },
+    "ip_ss": {
+      "type": "string",
+      "required": true
+    },
+    "id_user": {
+      "type": "number",
+      "required": true
+    },
+    "id_car": {
+      "type": "number",
+      "required": true
+    },
+    "time_ss": {
+      "type": "string",
+      "required": true
+    },
+    "id_comment": {
+      "type": "number",
+      "required": true
+    },
+    "type_car": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
