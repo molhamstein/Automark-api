@@ -28,7 +28,7 @@
   },
   "validations": [],
   "relations": {
-    "id_cl": {
+    "category_list": {
       "type": "hasMany",
       "model": "category_list",
       "foreignKey": "category_id",
@@ -36,10 +36,30 @@
         "nestRemoting": true
       }
     },
-	"cars": {
+    "order_cars": {
+      "type": "hasMany",
+      "model": "order_cars",
+      "foreignKey": "category_id",
+      "through": "category_list"
+    },
+    "option_car": {
+      "type": "hasMany",
+      "model": "option_car",
+      "foreignKey": "option_id",
+      "through": "category_list"
+    },
+    "cars": {
       "type": "hasMany",
       "model": "cars",
       "foreignKey": "category_c",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "cars_type": {
+      "type": "hasMany",
+      "model": "cars_type",
+      "foreignKey": "category_t",
       "options": {
         "nestRemoting": true
       }

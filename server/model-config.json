@@ -38,7 +38,7 @@
   "Message": {
     "dataSource": null
   },
-   "cars": {
+  "cars": {
     "dataSource": "mysql-automark-db",
     "public": true
   },
@@ -107,6 +107,10 @@
     "public": true
   },
   "value_option": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "option_car": {
     "dataSource": "mysql-automark-db",
     "public": true
   }

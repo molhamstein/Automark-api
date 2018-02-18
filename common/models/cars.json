@@ -7,12 +7,12 @@
     "validateUpsert": true
   },
   "properties": {
-	 "id_c": {
+    "id_c": {
       "type": "number",
+      "id": true,
       "generated": true,
-      "id":true,
-      "required":false,
-      "doc":"This is the primary ID used to identify a contact"
+      "required": false,
+      "doc": "This is the primary ID used to identify a contact"
     },
     "title_c": {
       "type": "string"
@@ -92,7 +92,7 @@
   },
   "validations": [],
   "relations": {
-	"comments": {
+    "comments": {
       "type": "hasMany",
       "model": "comments",
       "foreignKey": "id_car",
