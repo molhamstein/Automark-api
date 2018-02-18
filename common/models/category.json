@@ -35,6 +35,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+	"cars": {
+      "type": "hasMany",
+      "model": "cars",
+      "foreignKey": "category_c",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

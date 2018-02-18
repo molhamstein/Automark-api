@@ -2,11 +2,18 @@
   "name": "city",
   "plural": "cities",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+	"id_c": {
+      "type": "number",
+      "generated": true,
+      "id":true,
+      "required":false,
+      "doc":"This is the primary ID used to identify a contact"
+    },
     "name_c": {
       "type": "string"
     },
@@ -18,7 +25,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+	"cars": {
+      "type": "hasMany",
+      "model": "cars",
+      "foreignKey": "city_c",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

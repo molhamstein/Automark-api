@@ -1,5 +1,5 @@
 {
-  "name": "comment",
+  "name": "comments",
   "plural": "comments",
   "base": "PersistedModel",
   "idInjection": false,

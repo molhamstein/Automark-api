@@ -38,6 +38,22 @@
   "Message": {
     "dataSource": null
   },
+   "cars": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "cars_meta": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "cars_type": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
+  "city": {
+    "dataSource": "mysql-automark-db",
+    "public": true
+  },
   "category": {
     "dataSource": "mysql-automark-db",
     "public": true
@@ -54,7 +70,7 @@
     "dataSource": "mysql-automark-db",
     "public": true
   },
-  "comment": {
+  "comments": {
     "dataSource": "mysql-automark-db",
     "public": true
   },

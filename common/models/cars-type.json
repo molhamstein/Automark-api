@@ -2,11 +2,18 @@
   "name": "cars_type",
   "plural": "cars_types",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+	"id_t": {
+      "type": "number",
+      "generated": true,
+      "id":true,
+      "required":false,
+      "doc":"This is the primary ID used to identify a contact"
+    },
     "name_t": {
       "type": "string"
     },
@@ -21,7 +28,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+	  "cars": {
+      "type": "hasMany",
+      "model": "cars",
+      "foreignKey": "type_c",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
