@@ -51,7 +51,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "car": {
+      "type": "belongsTo",
+      "model": "cars",
+      "foreignKey": "id_car",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
