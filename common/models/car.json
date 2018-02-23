@@ -1,12 +1,22 @@
 {
-  "name": "car",
+  "name": "cars",
   "plural": "cars",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "include": "cars_meta"
+  },
   "properties": {
+    "id_c": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false,
+      "doc": "This is the primary ID used to identify a contact"
+    },
     "title_c": {
       "type": "string"
     },
@@ -28,7 +38,7 @@
     "odometer_c": {
       "type": "string"
     },
-    "transsmission_c": {
+    "transmission_c": {
       "type": "string"
     },
     "status_c": {
@@ -84,7 +94,26 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "comments",
+      "foreignKey": "id_car",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "car_meta": {
+      "type": "embedsMany",
+      "model": "cars_meta",
+      "foreignKey": "id_cars_m",
+      "property": "cars_meta",
+      "options": {
+        "validate": true,
+        "forceId": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

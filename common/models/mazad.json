@@ -32,7 +32,7 @@
       "type": "number"
     },
     "time_mazad": {
-      "type": "timestamp",
+      "type": "date",
       "required": true
     }
   },

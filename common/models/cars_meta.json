@@ -2,11 +2,17 @@
   "name": "cars_meta",
   "plural": "cars_metas",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id_m": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
     "id_cars_m": {
       "type": "number"
     },
@@ -18,7 +24,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "cars": {
+      "type": "belongsTo",
+      "model": "cars",
+      "foreignKey": "id_cars_m",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

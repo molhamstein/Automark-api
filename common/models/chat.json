@@ -30,7 +30,7 @@
       "required": true
     },
     "time_chat": {
-      "type": "timestamp",
+      "type": "date",
       "required": true
     },
     "title_chat": {

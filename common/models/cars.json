@@ -99,8 +99,22 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "cars_meta_details": {
+      "type": "hasMany",
+      "model": "cars_meta",
+      "foreignKey": "id_cars_m",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
+  "mixins": {
+      "CascadeDelete": {
+        "relations": ["comments", "cars_meta_details"],
+        "deepDelete": true
+      }
+    },
   "acls": [],
   "methods": {}
 }
