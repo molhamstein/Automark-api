@@ -40,79 +40,79 @@
     "dataSource": null
   },
   "cars": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "cars_meta": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "cars_type": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "city": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "category": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "category_list": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "chat": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "code_active": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "comments": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "groups": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "mazad": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "option_system": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "order_cars": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "pages": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "permis": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "shows": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "spam_system": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "value_option": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   },
   "option_car": {
-    "dataSource": "mysql-automark-db",
+    "dataSource": "mysql_automark_db",
     "public": true
   }
 }

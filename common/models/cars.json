@@ -6,6 +6,15 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "CascadeDelete": {
+      "relations": [
+        "comments",
+        "cars_meta_details"
+      ],
+      "deepDelete": true
+    }
+  },
   "properties": {
     "id_c": {
       "type": "number",
@@ -109,12 +118,35 @@
       }
     }
   },
-  "mixins": {
-      "CascadeDelete": {
-        "relations": ["comments", "cars_meta_details"],
-        "deepDelete": true
-      }
-    },
   "acls": [],
-  "methods": {}
+  "methods": {
+    "cars_advertisment": {
+      "accepts": [
+        {
+          "arg": "filter",
+          "type": "array",
+          "required": true,
+          "description": "filter object is an array of dynamic attributes filter and each object contains {op, code, value}",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "array",
+          "root": true,
+          "description": "return array of cars & meta_cars objects"
+        }
+      ],
+      "description": "fetch cars according to cars_meta filters (dynamic fields)",
+      "http": [
+        {
+          "path": "/cars_advertisment",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }

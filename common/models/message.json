@@ -9,16 +9,17 @@
     "greet": {
       "accepts": [
         {
-          "arg": "msg",
-          "type": "string",
+          "arg": "filter",
+          "type": "array",
+          "required": true,
           "http": {
             "source": "query"
           }
         }
       ],
       "returns": {
-        "arg": "greeting",
-        "type": "string"
+        "root": true,
+        "type": "array"
       },
       "http": {
         "verb": "get"

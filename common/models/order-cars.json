@@ -37,12 +37,6 @@
       "model": "category",
       "foreignKey": "order_cl",
       "through": "category_list"
-    },
-    "category": {
-      "type": "hasMany",
-      "model": "category",
-      "foreignKey": "order_cl",
-      "through": "category_list"
     }
   },
   "acls": [],
