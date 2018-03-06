@@ -9,6 +9,7 @@
     "password": "",
     "name": "mysql_automark_db",
     "connector": "mysql",
-    "user": "root"
+    "user": "root",
+    "collation": "latin1_swedish_ci"
   }
 }

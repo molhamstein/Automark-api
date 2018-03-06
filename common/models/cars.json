@@ -24,7 +24,10 @@
       "doc": "This is the primary ID used to identify a contact"
     },
     "title_c": {
-      "type": "string"
+      "type": "string",
+      "mysql": {
+         "dataType": "Binary"
+     }
     },
     "type_c": {
       "type": "number"
@@ -122,16 +125,29 @@
   "methods": {
     "cars_advertisment": {
       "accepts": [
-        {
-          "arg": "filter",
-          "type": "array",
-          "required": true,
-          "description": "filter object is an array of dynamic attributes filter and each object contains {op, code, value}",
+        {"arg": "dynamic_filter", "type": "array",
+          "description": "dynamic_filter object is an array of dynamic attributes filter and each object contains {op, code_m, _1} or {op, code_m, _1,_2} , don't use % when using like",
           "http": {
             "source": "query"
           }
-        }
-      ],
+        },
+        {"arg": "static_filter", "type": "array",
+          "description": "static_filter object is an array of table column attributes and each object contains {op, option, _1} or {op, option, _1, _2} , don't use % when using like",
+          "http": {
+            "source": "query"
+          }
+        },
+        {"arg": "offset", "type": "number",
+          "http": {
+              "source": "query"
+            }
+        },
+        {"arg": "limit", "type": "number",          
+          "http": {
+              "source": "query"
+            }
+          }
+        ],
       "returns": [
         {
           "arg": "data",

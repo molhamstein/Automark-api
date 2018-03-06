@@ -27,7 +27,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "option_car": {
+      "type": "belongsTo",
+      "model": "option_car",
+      "foreignKey": "option_id_v"
+    }
+  },
   "acls": [],
   "methods": {}
 }

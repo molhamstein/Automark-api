@@ -15,25 +15,25 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysql_automark_db"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mysql_automark_db",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysql_automark_db",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysql_automark_db",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysql_automark_db",
     "public": false
   },
   "Message": {

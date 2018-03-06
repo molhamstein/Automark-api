@@ -13,14 +13,18 @@
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "encoding": "^0.1.12",
     "helmet": "^3.10.0",
+    "iconv-lite": "^0.4.19",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-cascade-delete-mixin": "^2.0.0",
     "loopback-component-explorer": "^5.0.0",
     "loopback-connector-mysql": "^5.2.0",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0"
+    "sha256": "^0.2.0",
+    "strong-error-handler": "^2.0.0",
+    "utf8": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",

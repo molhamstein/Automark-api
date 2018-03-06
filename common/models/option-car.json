@@ -41,6 +41,11 @@
       "model": "category",
       "foreignKey": "option_id",
       "through": "category_list"
+    },
+    "value_option": {
+      "type": "hasMany",
+      "model": "value_option",
+      "foreignKey": "option_id_v"
     }
   },
   "acls": [],
