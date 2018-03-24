@@ -11,5 +11,11 @@
     "connector": "mysql",
     "user": "root",
     "collation": "latin1_swedish_ci"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage"
   }
 }

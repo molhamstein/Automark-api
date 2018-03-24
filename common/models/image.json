@@ -1,27 +1,12 @@
 {
-  "name": "groups",
-  "plural": "groups",
-  "base": "PersistedModel",
-  "idInjection": false,
+  "name": "image",
+  "plural": "images",
+  "base": "Model",
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id_g": {
-      "type": "number",
-      "id": true,
-      "generated": true,
-      "required": false
-    },
-    "name_g": {
-      "type": "string",
-      "required": true
-    },
-    "permissions": {
-      "type": "string",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {},
   "acls": [

@@ -14,9 +14,6 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "mysql_automark_db"
-  },
   "AccessToken": {
     "dataSource": "mysql_automark_db",
     "public": false
@@ -35,9 +32,6 @@
   "Role": {
     "dataSource": "mysql_automark_db",
     "public": false
-  },
-  "Message": {
-    "dataSource": null
   },
   "cars": {
     "dataSource": "mysql_automark_db",
@@ -112,6 +106,18 @@
     "public": true
   },
   "option_car": {
+    "dataSource": "mysql_automark_db",
+    "public": true
+  },
+  "users": {
+    "dataSource": "mysql_automark_db",
+    "public": true
+  },
+  "image": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "testUser": {
     "dataSource": "mysql_automark_db",
     "public": true
   }

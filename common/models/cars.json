@@ -26,8 +26,8 @@
     "title_c": {
       "type": "string",
       "mysql": {
-         "dataType": "Binary"
-     }
+        "dataType": "Binary"
+      }
     },
     "type_c": {
       "type": "number"
@@ -72,7 +72,7 @@
       "type": "number"
     },
     "images_c": {
-      "type": "string"
+      "type": "any"
     },
     "type_ads_c": {
       "type": "string"
@@ -119,35 +119,106 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "users": {
+      "type": "belongsTo",
+      "model": "users",
+      "foreignKey": "id_user",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "cars_advertisment"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "cars_meta_option"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "cars_meta_option_by_id"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    }
+  ],
   "methods": {
     "cars_advertisment": {
       "accepts": [
-        {"arg": "dynamic_filter", "type": "array",
+        {
+          "arg": "dynamic_filter",
+          "type": "array",
           "description": "dynamic_filter object is an array of dynamic attributes filter and each object contains {op, code_m, _1} or {op, code_m, _1,_2} , don't use % when using like",
           "http": {
             "source": "query"
           }
         },
-        {"arg": "static_filter", "type": "array",
+        {
+          "arg": "static_filter",
+          "type": "array",
           "description": "static_filter object is an array of table column attributes and each object contains {op, option, _1} or {op, option, _1, _2} , don't use % when using like",
           "http": {
             "source": "query"
           }
         },
-        {"arg": "offset", "type": "number",
+        {
+          "arg": "offset",
+          "type": "number",
           "http": {
-              "source": "query"
-            }
-        },
-        {"arg": "limit", "type": "number",          
-          "http": {
-              "source": "query"
-            }
+            "source": "query"
           }
-        ],
+        },
+        {
+          "arg": "limit",
+          "type": "number",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
       "returns": [
         {
           "arg": "data",
@@ -160,6 +231,79 @@
       "http": [
         {
           "path": "/cars_advertisment",
+          "verb": "get"
+        }
+      ]
+    },
+    "cars_meta_option": {
+      "accepts": [
+        {
+          "arg": "offset",
+          "type": "number",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "limit",
+          "type": "number",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "include",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "array",
+          "root": true,
+          "description": "return array of cars & meta_cars & options objects"
+        }
+      ],
+      "description": "return array of cars & meta_cars & options objects",
+      "http": [
+        {
+          "path": "/cars_meta_option",
+          "verb": "get"
+        }
+      ]
+    },
+    "cars_meta_option_by_id": {
+      "accepts": [
+        {
+          "arg": "id",
+          "type": "number",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "include",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "array",
+          "root": true,
+          "description": "return Object of car & meta_cars & options object"
+        }
+      ],
+      "description": "car id as required field",
+      "http": [
+        {
+          "path": "/cars_meta_option_by_id",
           "verb": "get"
         }
       ]

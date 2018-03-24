@@ -1,0 +1,50 @@
+{
+  "name": "testUser",
+  "plural": "testUsers",
+  "base": "PersistedModel",
+     "idInjection": false,
+  "properties": {
+    "id_u": {
+      "type": "number",
+      "id": true,
+      "generated": true,
+      "required": false
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "email_u": {
+      "type": "string",
+      "required": true
+    },
+    "salt_u": {
+      "type": "string"
+    },
+    "joined_u": {
+      "type": "date"
+    },
+    "group_u": {
+      "type": "number"
+    },
+    "name_u": "string",
+    "lastname_u": "string",
+    "age_u": "number",
+    "mobile_u": "string",
+    "telphone": "string",
+    "lastnews_u": "number",
+    "option_u": "string",
+    "act_u": "number",
+    "image_u": "string"
+  },
+  "options": {
+    "validateUpsert": true
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
