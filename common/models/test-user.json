@@ -2,7 +2,10 @@
   "name": "testUser",
   "plural": "testUsers",
   "base": "PersistedModel",
-     "idInjection": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
     "id_u": {
       "type": "number",
@@ -30,21 +33,49 @@
     "group_u": {
       "type": "number"
     },
-    "name_u": "string",
-    "lastname_u": "string",
-    "age_u": "number",
-    "mobile_u": "string",
-    "telphone": "string",
-    "lastnews_u": "number",
-    "option_u": "string",
-    "act_u": "number",
-    "image_u": "string"
-  },
-  "options": {
-    "validateUpsert": true
+    "name_u": {
+      "type": "string"
+    },
+    "lastname_u": {
+      "type": "string"
+    },
+    "age_u": {
+      "type": "number"
+    },
+    "mobile_u": {
+      "type": "string"
+    },
+    "telphone": {
+      "type": "string"
+    },
+    "lastnews_u": {
+      "type": "number"
+    },
+    "option_u": {
+      "type": "string"
+    },
+    "act_u": {
+      "type": "number"
+    },
+    "image_u": {
+      "type": "string"
+    }
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

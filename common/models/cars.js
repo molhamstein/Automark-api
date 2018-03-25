@@ -172,9 +172,38 @@ module.exports = function(Cars) {
 
         return result;
 	}
+	
+	Cars.observe('before save', function(ctx, next) {
+		console.log(ctx);
+	  	if(ctx.isNewInstance){
+	  		ctx.instance.id_user = ctx.options.accessToken.userId
+	  		next();
+	  	}
+	  	else if(ctx.instance.id_c){
+	  		console.log("here")
+	  		Cars.findOne({
+	            where: {
+	              id_c: ctx.instance.id_c
+	            }
+	        },function(err,res){
+	        	console.log(res.id_user + " == "+ctx.options.accessToken.userId)
+	        	if(err) return next(err);
+	        	else if(res.id_user == ctx.options.accessToken.userId){
+	        		ctx.instance.id_user = ctx.options.accessToken.userId
+	        		console.log("HAS ACCESS TO EDIT")
+	        		next();
+	        	}
+	        	else if(ctx.options.authorizedRoles.admin == true)
+	        		next();
+	        	else
+	        		return next("Not authorized");	
+	        })
+	  	}
+	  	else 
+	  		return next("Not authorized or cant update the requested record");
+	});
 
 	Cars.observe('after save', function(ctx, next) {
-	  	console.log('Car before save', ctx.instance);
 	  	var Carsmeta = app.models.cars_meta;
 	  	var itemsProcessed = 0;
 	  	if(ctx.instance.cars_meta && ctx.instance.cars_meta.length > 0)
